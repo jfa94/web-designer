@@ -1,0 +1,16 @@
+{
+  "name": "web-designer",
+  "version": "0.3.0",
+  "description": "Complete web design toolkit — design critique, UX writing, accessibility audits, design systems, research synthesis, dev handoff, plus landing page copywriting, layout design, and production-grade frontend builds.",
+  "author": {
+    "name": "Javier Flores"
+  },
+  "keywords": [
+    "design",
+    "ux",
+    "accessibility",
+    "frontend",
+    "design-system",
+    "copywriting"
+  ]
+}

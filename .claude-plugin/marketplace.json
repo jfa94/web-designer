@@ -1,0 +1,13 @@
+{
+    "name": "javier-plugins",
+    "owner": {"name": "Javier Flores"},
+    "description": "Javier's plugin marketplace — ships the web-designer toolkit",
+    "plugins": [
+        {
+            "name": "web-designer",
+            "source": "./",
+            "description": "Complete web design toolkit — design critique, UX writing, accessibility audits, design systems, research synthesis, dev handoff, plus landing page copywriting, layout design, and production-grade frontend builds.",
+            "version": "0.3.0"
+        }
+    ]
+}
