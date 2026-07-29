@@ -5,7 +5,7 @@ A comprehensive web design toolkit that combines design critique, UX writing, ac
 ## Installation
 
 ```bash
-claude plugin marketplace add github:jfa94/web-designer
+claude plugin marketplace add jfa94/web-designer
 claude plugin install web-designer@javier-plugins
 ```
 
