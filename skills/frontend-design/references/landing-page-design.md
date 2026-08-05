@@ -1,13 +1,10 @@
----
-name: landing-page-design
-description: "Use this skill whenever the user wants to design, structure, or optimize a landing page or homepage for a SaaS product, startup, app, or digital service. Triggers include: requests to 'design a landing page', 'structure my homepage', 'improve my page layout', 'optimize my page for conversions', 'wireframe a landing page', or any mention of hero sections, above-the-fold content, CTA placement, page structure, visual hierarchy, or conversion-focused page design. Also use when reviewing or critiquing an existing landing page layout, planning page sections, or deciding what content goes where on a marketing page. Covers both B2C and B2B SaaS contexts, with emphasis on consumer-facing products. Do NOT use for copywriting and messaging — use the landing-page-copy skill for that. Do NOT use for general web development, app UI design, or non-marketing pages."
----
-
-# Landing Page Design for Maximum Conversion
+# Landing Page Design Reference
 
 ## Overview
 
-This skill provides a complete framework for designing high-converting SaaS landing pages and homepages. It covers page structure, hero section design, CTA placement, social proof strategy, visual hierarchy, mobile optimization, and performance — all backed by conversion research and data.
+This reference provides a framework for designing SaaS landing pages and homepages. It covers page structure, hero design, CTA placement, social proof, visual hierarchy, mobile behavior, and performance.
+
+Numeric conversion lifts below come from individual studies or benchmarks with specific traffic, offers, and implementations. They are examples for forming hypotheses, not universal expected results. Verify the source and context before citing a figure; validate consequential choices with product evidence and experiments.
 
 The core principle: **visitors who can't answer "What is this, and why should I care?" within 5 seconds will leave.** Every design decision serves clarity, trust, and a frictionless path to action.
 
@@ -15,11 +12,11 @@ The core principle: **visitors who can't answer "What is this, and why should I 
 
 ## Page Structure Blueprint
 
-High-converting SaaS pages follow a specific section order that mirrors the visitor's psychological journey from attention → trust → action. Use this as the default structure, then adapt based on product complexity and price point.
+A common SaaS sequence moves from attention → trust → action. Use it as a starting hypothesis, then adapt it to audience, traffic intent, product complexity, price, and evidence.
 
 ### Recommended section order
 
-1. **Navigation bar** — 5–7 items max, primary CTA button in the header. For dedicated landing pages (not homepages), consider removing navigation entirely — this can double conversions in A/B tests.
+1. **Navigation bar** — Keep choices focused and make the primary action clear. Dedicated campaign pages may test reduced navigation against normal wayfinding.
 2. **Hero section** — Headline, subheadline, primary CTA, product visual, micro social proof. This is where ~80% of attention concentrates. See the Hero Section Design section below.
 3. **Social proof bar** — Logo bar or "Trusted by X users" immediately below the hero. Establishes credibility before the visitor scrolls.
 4. **Problem statement** — Articulates the pain or frustration the audience feels. Makes visitors feel understood before presenting a solution.
@@ -50,7 +47,7 @@ The hero carries disproportionate weight. 57% of all viewing time occurs above t
 
 Every hero section needs these five elements working together:
 
-1. **Headline** — Under 8 words / 44 characters. Focuses on outcomes, not features. See the landing-page-copy skill for headline formulas.
+1. **Headline** — Clear, outcome-focused, and sized to the composition. See the ux-copy skill's landing-page reference for headline formulas.
 2. **Subheadline** — One sentence that expands on the promise or addresses the top objection.
 3. **Primary CTA button** — Single, visually dominant, high-contrast color, action-oriented copy.
 4. **Product visual** — Real screenshot, interactive demo, or short animation showing the product in action. Avoid stock photos and abstract illustrations.
@@ -80,22 +77,22 @@ CTA strategy is one of the highest-leverage optimization areas.
 
 ### Key principles
 
-- **One type of CTA, repeated**: Pages with a single focused CTA convert 266% better than those with multiple competing offers. Repeat the same CTA 4–6 times throughout the page (hero, sticky header, after features, after testimonials, page bottom).
-- **Centered placement**: Centered CTAs receive 682% more clicks than left-aligned ones.
-- **Social proof adjacency**: Placing social proof directly beneath a CTA can increase conversions by 68%.
-- **Sticky mobile CTA**: A floating button visible while scrolling produced 18% more trial starts in one test.
+- **One primary action, repeated when useful**: Avoid equal visual weight for competing offers. Repeat the same action at natural decision points on long pages; frequency follows page length and evidence.
+- **Placement follows composition**: Centered and left-aligned CTAs can both work. Preserve reading flow, proximity to the promise, and clear hierarchy.
+- **Proof near claims**: Place relevant, credible proof near the claim or action it supports.
+- **Sticky mobile CTA**: Test it when the primary action otherwise becomes hard to reach; ensure it does not obscure content or focus.
 
 ### Button design
 
-- Minimum tap target: 48×48px (Google's standard). Recommended: 64×64px on mobile.
-- Increasing button size by 20% can improve click-through by 90%.
+- Use the accessibility skill's target guidance: 24×24 CSS px is the WCAG AA floor; favor 44–48 for primary actions.
+- Make the primary action visually prominent without implying that size alone predicts conversion.
 - Color should prioritize contrast against surrounding area, not any specific color. The famous red-vs-green tests were really contrast tests.
-- Remove visual clutter around the CTA — this alone produced a 232% conversion jump in one experiment.
+- Remove competing clutter around the CTA, then test the complete composition.
 - Add generous whitespace around buttons.
 
 ### Friction-reducing microcopy beneath CTAs
 
-Always include doubt-removing text near CTAs:
+Include accurate doubt-removing text near CTAs when it answers a real objection:
 
 - "No credit card required"
 - "Free 14-day trial"
@@ -166,7 +163,7 @@ If you truly have zero social proof of any kind, lean heavily on risk reversal (
 
 - Body text: minimum 16px on all devices. No zooming should be required.
 - Headlines: significantly larger than body (1.5–2x minimum). Weight and size should clearly establish hierarchy.
-- Reading level of copy matters more than font choice — see the landing-page-copy skill for details.
+- Reading level of copy matters more than font choice — see the ux-copy skill's landing-page reference for details.
 
 ### Visual scanning patterns
 
@@ -187,16 +184,16 @@ Visitors scan in F-patterns and Z-patterns. Place the most important elements (h
 
 ## Mobile Optimization
 
-Mobile accounts for 83% of SaaS landing page visits but converts at roughly half the desktop rate (1.6–2.9% mobile vs. 4.8% desktop). Only 50% of landing pages are mobile-friendly.
+Mobile traffic and conversion vary sharply by acquisition channel and product. Treat any desktop/mobile gap as a prompt to inspect intent, performance, layout, forms, and measurement—not proof that viewport caused the gap.
 
 ### Mobile-specific requirements
 
 - Two-column desktop layouts must collapse to single-column with headline and CTA visible without scrolling.
-- Tap targets: 48px minimum size with adequate spacing to prevent accidental clicks.
+- Tap targets: WCAG AA uses a 24×24 CSS px floor or spacing provisions; favor 44–48 for primary actions and provide adequate separation.
 - Forms: request minimal information on mobile. Collect additional data post-signup.
 - Body text: 16px minimum, no zoom required.
 - Sticky floating CTA: ensures the conversion action is always one tap away.
-- Images and video: serve optimized formats with lazy loading.
+- Images and video: serve optimized responsive formats; prioritize and eagerly load the LCP/hero asset, and lazy-load appropriate below-fold media.
 - Test on real devices, not just browser resize.
 
 ### The mobile conversion gap
@@ -218,7 +215,7 @@ Speed is the invisible multiplier under every other optimization.
 
 ### Target and tactics
 
-Target: **under 2 seconds** for Largest Contentful Paint (LCP).
+Target Core Web Vitals at p75: **LCP ≤2.5s, INP ≤200ms, CLS ≤0.1**. The frontend-design skill owns the implementation checklist.
 
 - Compress images (WebP/AVIF).
 - Lazy load below-fold content.
@@ -272,11 +269,11 @@ When designing for B2B:
 Use this to audit any SaaS landing page:
 
 - [ ] Can a visitor understand what the product does within 5 seconds?
-- [ ] Is the headline under 8 words and outcome-focused?
+- [ ] Is the headline clear, outcome-focused, and appropriate to the composition?
 - [ ] Is there one clear, high-contrast primary CTA above the fold?
-- [ ] Is the CTA repeated 4–6 times throughout the page?
+- [ ] Does the primary action recur at natural decision points without competing offers?
 - [ ] Is there social proof (logo bar or user count) visible without scrolling?
-- [ ] Does the page load in under 2 seconds?
+- [ ] Do field Core Web Vitals meet LCP ≤2.5s, INP ≤200ms, and CLS ≤0.1 at p75?
 - [ ] Is pricing transparent and easy to find?
 - [ ] Are there specific, quantified testimonials (not vague praise)?
 - [ ] Does the mobile experience show headline + CTA without scrolling?

@@ -6,8 +6,8 @@
         {
             "name": "web-designer",
             "source": "./",
-            "description": "Complete web design toolkit — design critique, UX writing, accessibility audits, design systems, research synthesis, dev handoff, plus landing page copywriting, layout design, and production-grade frontend builds.",
-            "version": "0.3.0"
+            "description": "Six-skill web design toolkit for accessibility, critique, design systems and handoff, research synthesis, UX copy, and production-grade frontend design.",
+            "version": "0.4.0"
         }
     ]
 }

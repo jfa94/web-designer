@@ -1,6 +1,6 @@
 # Web Designer Plugin
 
-A comprehensive web design toolkit that combines design critique, UX writing, accessibility audits, design system management, research synthesis, and developer handoff with specialised landing page copywriting, layout design, and production-grade frontend build skills.
+A focused web-design toolkit with six skills for accessibility, critique, design systems, research synthesis, UX copy, and production-grade frontend design.
 
 ## Installation
 
@@ -9,93 +9,72 @@ claude plugin marketplace add jfa94/web-designer
 claude plugin install web-designer@javier-plugins
 ```
 
-To try it without installing, point Claude Code at a local checkout:
+To try a local checkout:
 
 ```bash
 claude --plugin-dir /path/to/web-designer-plugin
 ```
 
-## Commands
-
-Explicit workflows you invoke with a slash command:
-
-| Command | Description |
-|---|---|
-| `/critique` | Get structured design feedback — usability, visual hierarchy, accessibility, and consistency |
-| `/design-system` | Audit, document, or extend your design system — components, tokens, patterns |
-| `/ux-copy` | Write or review UX copy — microcopy, error messages, empty states, onboarding flows |
-| `/accessibility` | Run an accessibility audit — WCAG compliance, colour contrast, screen reader, and keyboard navigation |
-| `/research-synthesis` | Synthesise user research — interviews, surveys, usability tests into actionable insights |
-
 ## Skills
 
-Domain knowledge Claude uses automatically when relevant. Each is also invocable directly as `/web-designer:<name>`:
+Skills appear in the slash menu as `/web-designer:<name>` and Claude can invoke them automatically when the request matches their description.
 
-| Skill | Description |
+| Skill | Use it for |
 |---|---|
-| `design-critique` | Evaluate designs for usability, visual hierarchy, consistency, and adherence to design principles |
-| `design-system-management` | Manage design tokens, component libraries, and pattern documentation |
-| `ux-writing` | Write effective microcopy — clear, concise, consistent, and brand-aligned |
-| `accessibility-review` | Audit designs and code for WCAG 2.1 AA compliance |
-| `user-research` | Plan, conduct, and synthesise user research — interviews, surveys, usability testing |
-| `design-handoff` | Create comprehensive developer handoff documentation from designs |
-| `landing-page-copy` | Write high-converting landing page copy using PAS, AIDA, StoryBrand, JTBD, and other frameworks |
-| `landing-page-design` | Design landing page layouts optimised for conversion — hero sections, CTA placement, social proof strategy |
-| `frontend-design` | Build distinctive, production-grade frontend code (HTML/CSS/JS, React, Vue) with a bold, context-specific aesthetic — no generic AI design |
+| `accessibility` | WCAG 2.2 AA audits, keyboard and screen-reader review, contrast, targets, reflow, and handoff annotations |
+| `critique` | Evidence-backed design feedback across usability, hierarchy, consistency, accessibility risk, and non-happy-path states |
+| `design-system` | Inventory, audit, documentation, extension, governance, refactoring, tokens, and developer handoff |
+| `research-synthesis` | Turning existing transcripts, survey results, usability notes, support feedback, and analytics context into themes and opportunities |
+| `ux-copy` | Interface microcopy, errors, empty states, CTAs, onboarding, and landing-page messaging |
+| `frontend-design` | Distinctive production frontend builds plus landing-page structure, visual design, responsiveness, and performance |
 
-### When to use which skill
+## Routing Guide
 
-| Task | Skill |
-|------|-------|
-| Decide how to structure a landing page | `landing-page-design` |
-| Write or improve page copy | `landing-page-copy` |
-| Full landing page (layout + copy) | Use both `landing-page-design` and `landing-page-copy` |
-| Build the actual coded page, component, or app | `frontend-design` (after planning with the other two) |
-| Review an existing design | `design-critique`, `accessibility-review` |
-| Spec a design for engineering | `design-handoff` |
+| Need | Skill |
+|---|---|
+| Audit WCAG conformance | `accessibility` |
+| Review an existing design broadly | `critique` |
+| Audit or extend reusable patterns | `design-system` |
+| Turn collected evidence into findings | `research-synthesis` |
+| Write the words | `ux-copy` |
+| Plan the layout or build the interface | `frontend-design` |
 
-## Example Workflows
+For a full landing page, use `frontend-design` for structure and implementation, `ux-copy` for messaging, `critique` for assembled-flow feedback, and `accessibility` for the conformance audit.
 
-### Writing Landing Page Copy
+## Example Invocations
 
-```
-/landing-page-copy My SaaS project management tool for freelancers
-```
-
-Get section-by-section copy — hero headline, subheadline, problem statement, features, testimonials, and CTAs — all optimised for conversion.
-
-### Full Landing Page Workflow
-
-1. `/landing-page-design` — plan the page structure and layout
-2. `/landing-page-copy` — write the copy for each section
-3. `/frontend-design` — build the coded page from the plan and copy
-4. `/critique` — review the assembled page for usability and consistency
-5. `/accessibility` — audit for WCAG compliance
-
-### Getting Design Feedback
-
-```
-/critique the checkout flow, focus on mobile
+```text
+/web-designer:critique the checkout flow, focus on mobile
+/web-designer:design-system audit
+/web-designer:ux-copy error message for a declined payment
+/web-designer:accessibility https://example.com/checkout
+/web-designer:research-synthesis ./research/checkout-notes.md
+/web-designer:frontend-design build the approved landing-page plan
 ```
 
-Share a Figma link, screenshot, or describe your design. Get structured feedback on usability, visual hierarchy, consistency, and accessibility.
+## 0.4.0 Rename Map
 
-### Developer Handoff
+Version 0.4.0 removes the duplicate `commands/` entries. Their workflows and output templates now live in the corresponding skills.
 
-```
-/design-handoff
-```
+| Before | Now |
+|---|---|
+| `/critique`, `design-critique` | `critique` |
+| `/accessibility`, `accessibility-review` | `accessibility` |
+| `/design-system`, `design-system-management`, `design-handoff` | `design-system` |
+| `/research-synthesis`, synthesis parts of `user-research` | `research-synthesis` |
+| `/ux-copy`, `ux-writing`, `landing-page-copy` | `ux-copy` |
+| `landing-page-design`, `frontend-design` | `frontend-design` |
 
-Share a Figma link and get a complete spec: measurements, design tokens, component states, interaction notes, and edge cases.
+Research planning, interview guides, survey design, and method selection were intentionally removed; this plugin now owns synthesis only.
 
 ## Optional Tool Integrations
 
-This plugin bundles no MCP servers — connect whichever tools you already use at user scope and the commands will take advantage of them automatically. Everything works without them.
+The plugin bundles no MCP servers. Connected tools are used when available and relevant; every skill also works from supplied files, URLs, screenshots, or text.
 
-| Category | Examples | What It Enables |
+| Category | Examples | Enables |
 |---|---|---|
-| **Design tool** | Figma | Pull designs, inspect components, access design tokens |
-| **User feedback** | Intercom, Productboard | Raw feedback, feature requests, NPS data |
-| **Project tracker** | Linear, Asana, Jira | Link designs to tickets, track implementation |
-| **Knowledge base** | Notion | Brand guidelines, design principles, research repository |
-| **Product analytics** | Amplitude, Mixpanel | Usage data for research synthesis and design decisions |
+| Design and component catalog | Figma, Storybook | Inspect designs, tokens, components, properties, and states |
+| Feedback | Intercom, Productboard | Ground critique and synthesis in user evidence |
+| Analytics | Amplitude, Mixpanel | Quantify qualitative themes and task outcomes |
+| Knowledge base | Notion | Retrieve voice, design-system, and prior-research guidance |
+| Project tracker | Linear, Asana, Jira | Link findings and remediation after approval |

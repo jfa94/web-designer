@@ -1,13 +1,10 @@
----
-name: landing-page-copy
-description: "Use this skill whenever the user wants to write, review, or optimize copy for a landing page, homepage, or marketing page. Triggers include: requests to 'write landing page copy', 'write a headline', 'improve my homepage messaging', 'write CTA text', 'create a value proposition', or any mention of copywriting frameworks (PAS, AIDA, StoryBrand, JTBD), headline formulas, benefit-driven copy, objection handling in copy, microcopy, CTA copy, or conversion-focused writing. Also use when the user asks to critique or rewrite existing landing page text, draft section-by-section copy for a page, or develop messaging for a product launch. Covers both B2C and B2B SaaS contexts, with emphasis on consumer-facing products. Do NOT use for page layout, visual design, or wireframing — use the landing-page-design skill for that. Do NOT use for general content writing, blog posts, email copy, or ad copy unless it's explicitly for a landing page."
----
-
-# Landing Page Copy for Maximum Conversion
+# Landing Page Copy Reference
 
 ## Overview
 
-This skill provides a complete framework for writing high-converting SaaS landing page copy. It covers headline formulas, messaging frameworks (PAS, AIDA, StoryBrand, JTBD, BAB, FAB), benefit-vs-feature writing, emotional and rational messaging, objection handling, microcopy, CTA text, and reading level optimization.
+This reference provides a framework for SaaS landing-page copy. It covers headline formulas, messaging frameworks (PAS, AIDA, StoryBrand, JTBD, BAB, FAB), benefit/feature writing, objection handling, CTA text, and reading-level review.
+
+Numeric conversion lifts below come from individual studies or benchmarks with specific audiences and implementations. Treat them as prompts for hypotheses, not universal forecasts. Verify the source and context before citing a figure, and test choices against product evidence.
 
 The core copywriting principle: **every word on the page must either build desire or remove doubt.** Copy that does neither is dead weight that dilutes the visitor's attention and slows them down.
 
@@ -272,17 +269,19 @@ When you're new and can't lean on large user numbers or enterprise logos:
 
 ---
 
-## Microcopy and CTA Text
+## Marketing CTA Text
+
+For product-interface labels, errors, empty states, and general microcopy, follow the main ux-copy skill. This section applies only to landing and marketing experiments.
 
 Small text changes yield surprisingly large results. These are among the highest-ROI copywriting optimizations.
 
 ### CTA button text principles
 
-- **2–4 words** is optimal length.
-- **First-person phrasing** outperforms second-person: "Start My Free Trial" beats "Start Your Free Trial" by creating psychological ownership.
-- **Benefit-specific text** increases conversions up to 161% vs. generic "Submit" or "Click Here."
-- **The word "free"** is the most powerful friction-reducer in CTA copy.
-- **Personalized CTAs** (matched to visitor context) convert 202% better than generic versions.
+- **2–4 words** is a useful CTA starting range when it can still name the outcome clearly.
+- **First-person phrasing** can outperform second-person in marketing experiments: "Start My Free Trial" creates psychological ownership. Test it against the ux-copy default rather than treating it as universal.
+- **Benefit-specific text** should explain what happens; test it against generic labels rather than assuming a fixed lift.
+- **"Free"** can reduce friction only when the offer is genuinely free and its terms are clear.
+- **Personalized CTAs** must reflect real visitor context, preserve privacy, and be tested against a stable default.
 
 ### High-converting SaaS CTA phrases
 
@@ -308,13 +307,11 @@ Ranked by commonality among top-performing SaaS sites:
 - Adding "there will be no additional costs" near checkout → 11.3% increase (Yoast)
 - Updated onboarding microcopy → 30% jump in user retention within one week
 
-### Where microcopy matters most
+### Where conversion microcopy matters most
 
-- **Beneath CTA buttons**: "No credit card required", "Cancel anytime", "14-day free trial"
-- **Form fields**: Placeholder text that clarifies what's needed, error messages that help rather than scold
-- **Loading states**: "Hang tight, we're setting up your workspace" rather than a bare spinner
-- **Empty states**: Encouraging first-use messages that guide action
-- **Tooltips**: Brief explanations for potentially confusing options
+- Beneath CTA buttons: risk reversal such as "No credit card required" or "Cancel anytime"
+- Around forms: explain why information is needed and what happens next
+- Near pricing: clarify billing, cancellation, trial, and guarantee terms
 
 ---
 
@@ -322,7 +319,7 @@ Ranked by commonality among top-performing SaaS sites:
 
 ### Reading level
 
-This is one of the most actionable findings in SaaS CRO: copy written at a 5th–7th grade reading level converts at 11.1%, while college-level copy converts at just 5.3%. In SaaS specifically, simple copy converts 514% better than difficult-to-read copy.
+Some SaaS benchmarks associate simpler reading levels with higher conversion, but audience expertise and task complexity matter. Optimize for comprehension, not a universal grade-level or conversion multiplier.
 
 **Practical guidelines:**
 
