@@ -13,7 +13,7 @@ If no mode is supplied, infer it only when the request is unambiguous; otherwise
 ## Shared Workflow
 
 1. Resolve design, code, Storybook, documentation, and tracker inputs.
-2. Inventory before auditing. An inventory records unique treatments; an audit judges them. Count visual variants even when they share a component name—the "37 button styles" reveal is useful evidence, not yet a verdict.
+2. Inventory before auditing (Brad Frost's interface-inventory method). An inventory records unique treatments; an audit judges them. Count visual variants even when they share a component name—the "37 button styles" reveal is useful evidence, not yet a verdict.
 3. Classify drift: token, component, pattern, documentation, or behavioral.
 4. Distinguish sanctioned, time-boxed exceptions (including live experiments) from unintentional drift.
 5. Record adoption (teams using it), compliance (following internal policy), and conformance (meeting an external standard) separately.
@@ -73,6 +73,9 @@ Document purpose and non-use cases, variants, API, tokens, all states and combin
 ### State Matrix
 | State/combination | Visual | Behavior | Accessibility |
 |---|---|---|---|
+
+### Accessibility Contract
+**Role:** [ARIA role or native element] | **Keyboard:** [keys and behavior] | **Screen reader:** [announcements and states]
 
 ### Tokens and Responsive Behavior
 | Token/component condition | Usage or reflow behavior |

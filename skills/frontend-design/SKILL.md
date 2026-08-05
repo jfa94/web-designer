@@ -1,6 +1,7 @@
 ---
 name: frontend-design
 description: Create distinctive, production-grade web components, pages, applications, and landing-page designs. Trigger with requests to build frontend interfaces, "design a landing page", "structure my homepage", "improve my page layout", "optimize my page for conversions", "wireframe a landing page", hero or above-the-fold design, CTA placement, page structure, visual hierarchy, conversion-focused design, or requests to review or plan landing-page sections and content placement. Use for layout, visual design, and implementation; use ux-copy when the deliverable is words or messaging, and critique for broad review of an existing design.
+argument-hint: "<brief, page, or component to build>"
 ---
 This skill guides creation of distinctive, production-grade frontend interfaces that avoid generic "AI slop" aesthetics. Implement real working code with exceptional attention to aesthetic details and creative choices.
 The user provides frontend requirements: a component, page, application, or interface to build. They may include context about the purpose, audience, or technical constraints.

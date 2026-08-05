@@ -16,7 +16,7 @@ The headline is the single most-read element on any page. For SaaS, it must acco
 
 ### Constraints
 
-- **Under 8 words / 44 characters** — brevity forces clarity. One company replaced a 14-word jargon-heavy headline with a 6-word statement and saw 27% more demo clicks in nine days.
+- **Brevity forces clarity** — a common benchmark is under 8 words / 44 characters; treat it as a pressure to cut, not a hard limit. One company replaced a 14-word jargon-heavy headline with a 6-word statement and saw 27% more demo clicks in nine days.
 - **Specificity over cleverness** — vague claims like "The future of productivity" fail the 5-second test. Specific outcomes like "Write emails 10x faster" pass instantly.
 - **The grunt test** (Donald Miller): Could someone glance at your page and immediately understand who you are, what you offer, and how to get it? If not, rewrite.
 
@@ -433,7 +433,7 @@ Microcopy: [Risk reversal — "No credit card required. Cancel anytime."]
 5. **Missing the emotional hook** — Leading with rational features instead of the feeling the product delivers.
 6. **Ignoring objections** — Hoping visitors won't think of reasons not to buy rather than proactively addressing them.
 7. **Generic CTAs** — "Submit" or "Click Here" instead of benefit-specific action text.
-8. **Writing at too high a reading level** — college-level writing converts at less than half the rate of 5th–7th grade writing.
+8. **Writing at too high a reading level** — some benchmarks associate simpler reading levels with higher conversion; optimize for your audience's comprehension, not a universal grade level.
 9. **Too much copy** — overwhelming the visitor with text they won't read instead of making each word earn its place.
 10. **Inconsistent messaging** — the headline promises one thing, the subheadline says another, and the features section goes in a third direction. The page should tell one cohesive story.
 
@@ -443,9 +443,9 @@ Microcopy: [Risk reversal — "No credit card required. Cancel anytime."]
 
 Use this to review any landing page's copy:
 
-- [ ] Does the headline communicate what the product does AND promise a benefit in under 8 words?
+- [ ] Does the headline communicate what the product does AND promise a benefit, concisely (benchmark: ~8 words)?
 - [ ] Can someone understand the value proposition within 5 seconds?
-- [ ] Is the copy written at a 5th–7th grade reading level?
+- [ ] Is the reading level matched to the audience—as simple as the subject allows?
 - [ ] Does the page lead with benefits above the fold and support with features below?
 - [ ] Is the CTA text benefit-specific (not generic "Submit" or "Sign Up")?
 - [ ] Is there friction-reducing microcopy near every CTA?

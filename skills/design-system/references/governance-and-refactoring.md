@@ -18,7 +18,7 @@ Classify a request:
 - Extendable: add a capability whose semantics serve multiple genuine uses.
 - Genuinely new: keep it separate until evidence supports convergence.
 
-The rule of three is a useful threshold for considering abstraction. It is not permission to force unlike use cases together. A wrong abstraction costs more than duplication. Watch for prop bloat, Boolean combinations, and conditionals that change semantics; prefer slots, composition, or separate components.
+The rule of three is a useful threshold for considering abstraction. It is not permission to force unlike use cases together. A wrong abstraction costs more than duplication (Sandi Metz). Watch for prop bloat, Boolean combinations, and conditionals that change semantics; prefer slots, composition, or separate components.
 
 Refactor upstream when the same need has at least three uses, when repeated fixes drift, or when one accessibility/behavior correction must reach every consumer. Do not refactor during urgent delivery without a migration path, when the similarity is superficial, or when a stable local solution has no meaningful maintenance cost.
 
@@ -38,7 +38,7 @@ Keep adoption, compliance, and conformance separate. A score can show a trend bu
 
 - Publish machine-readable component manifests and expose Storybook or an equivalent catalog through approved tools/MCP.
 - In consuming `CLAUDE.md`/`AGENTS.md`, instruct agents: never hallucinate component properties; inspect the current manifest/source.
-- Audit monthly when teams ship AI-generated UI; quarterly cadence lets cheap variation compound into drift.
+- Audit quarterly by default; escalate to monthly when teams ship significant AI-generated UI, where cheap variation compounds faster. Both are practitioner rules of thumb, not evidence-based standards.
 - Visual regression testing is only as good as the states you enumerate. Baseline important components and journeys per relevant viewport, theme, brand, locale, and interaction state.
 - Review changed pixels rather than blindly accepting baselines. Pair VRT with semantic, interaction, and accessibility checks.
 

@@ -15,7 +15,7 @@ Conformance is not usability, and tools cannot determine accessibility. Scope th
 1. Resolve the input. Open connected designs or URLs, read referenced files, or request the missing artifact and context.
 2. Establish the WCAG-EM scope: pages/screens, user journeys, technologies, representative samples, shared components, and exclusions.
 3. Test in layers:
-   - Automated: axe-core, WAVE, Lighthouse, or pa11y. Automation can assess roughly 30–40% of success criteria; axe-core reports finding about 57% of issue volume. These denominators differ.
+   - Automated: axe-core, WAVE, Lighthouse, or pa11y. Automation can assess roughly 30–40% of success criteria; axe-core reports finding about 57% of issue volume. These denominators differ. Automation cannot judge whether alt text is meaningful, whether focus order is logical, or whether a custom widget actually works—those need the manual layers below.
    - Keyboard: logical order, visible focus, no traps, skip paths, Escape behavior, and no pointer-only action.
    - Screen reader: NVDA + Firefox and VoiceOver + Safari where available; verify names, roles, states, landmarks, headings, and announcements.
    - Zoom and reflow: 200% resize, 400%/320 CSS-pixel reflow, and text-spacing overrides.
@@ -26,6 +26,7 @@ Conformance is not usability, and tools cannot determine accessibility. Scope th
 ## High-Risk Checks
 
 - Contrast: normal text 4.5:1; large text 3:1. Large means at least 18pt/24px regular or 14pt/~18.7px bold. AAA is 7:1 normal and 4.5:1 large.
+- Color: 1.4.1 Use of Color—never the sole means of conveying information, state, or error; pair color with text, icons, or patterns. One of the most common real-world failures.
 - Targets: WCAG 2.2 AA 2.5.8 requires 24×24 CSS px or sufficient spacing; 2.5.5's 44×44 is AAA. Apple uses 44pt and Material 48dp. Treat 24 as the floor and 44–48 as the target for primary actions.
 - Reflow and text: check 1.4.4 Resize Text, 1.4.10 Reflow, and 1.4.12 Text Spacing without lost content or function.
 - Input: check 2.1.1 Keyboard, 2.1.2 No Keyboard Trap, 2.5.3 Label in Name, 2.5.7 Dragging Movements, and 2.5.8 Target Size.
@@ -44,9 +45,9 @@ Conformance is not usability, and tools cannot determine accessibility. Scope th
 
 | Level | Definition |
 |---|---|
-| Critical | Blocks a task or access for a disability group; no reasonable workaround |
-| Major | Substantially impairs a task, causes serious confusion, or has a burdensome workaround |
-| Minor | Limited friction or isolated nonconformance that does not block the task |
+| 🔴 Critical | Blocks a task or access for a disability group; no reasonable workaround |
+| 🟡 Major | Substantially impairs a task, causes serious confusion, or has a burdensome workaround |
+| 🟢 Minor | Limited friction or isolated nonconformance that does not block the task |
 
 ## Output
 
@@ -61,22 +62,22 @@ Conformance is not usability, and tools cannot determine accessibility. Scope th
 ### Perceivable
 | # | Evidence and location | Criterion | Severity | Affected users | Recommendation |
 |---|---|---|---|---|---|
-| 1 | [reproduction] | [1.x.x] | [level] | [group/impact] | [specific fix] |
+| 1 | [reproduction] | [1.x.x] | [🔴/🟡/🟢] | [group/impact] | [specific fix] |
 
 ### Operable
 | # | Evidence and location | Criterion | Severity | Affected users | Recommendation |
 |---|---|---|---|---|---|
-| 1 | [reproduction] | [2.x.x] | [level] | [group/impact] | [specific fix] |
+| 1 | [reproduction] | [2.x.x] | [🔴/🟡/🟢] | [group/impact] | [specific fix] |
 
 ### Understandable
 | # | Evidence and location | Criterion | Severity | Affected users | Recommendation |
 |---|---|---|---|---|---|
-| 1 | [reproduction] | [3.x.x] | [level] | [group/impact] | [specific fix] |
+| 1 | [reproduction] | [3.x.x] | [🔴/🟡/🟢] | [group/impact] | [specific fix] |
 
 ### Robust
 | # | Evidence and location | Criterion | Severity | Affected users | Recommendation |
 |---|---|---|---|---|---|
-| 1 | [reproduction] | [4.x.x] | [level] | [group/impact] | [specific fix] |
+| 1 | [reproduction] | [4.x.x] | [🔴/🟡/🟢] | [group/impact] | [specific fix] |
 
 ### Color Contrast
 | Element | Foreground | Background | Ratio | Required | Pass? |

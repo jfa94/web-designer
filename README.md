@@ -54,7 +54,7 @@ For a full landing page, use `frontend-design` for structure and implementation,
 
 ## 0.4.0 Rename Map
 
-Version 0.4.0 removes the duplicate `commands/` entries. Their workflows and output templates now live in the corresponding skills.
+Version 0.4.0 is a breaking consolidation: the duplicate `commands/` entries are removed and five skills were renamed or merged. Old slash names (`/ux-writing`, `/design-handoff`, …) no longer exist; use the table below.
 
 | Before | Now |
 |---|---|

@@ -51,6 +51,8 @@ Set honest expectations without fake precision. Confirm consequential completion
 
 ## Service Patterns
 
+These follow the GOV.UK Design System content patterns:
+
 - Check answers: summarize consequential inputs in a scannable review step and let users change each section before submission.
 - Confirmation page: state completion, reference number when useful, next steps, timing, and contact/saveable record.
 - Service problem: use plain language, say what happened to submitted data, preserve answers where possible, and offer a realistic recovery/contact route.

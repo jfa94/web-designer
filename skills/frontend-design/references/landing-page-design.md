@@ -170,7 +170,7 @@ If you truly have zero social proof of any kind, lean heavily on risk reversal (
 Visitors scan in F-patterns and Z-patterns. Place the most important elements (headlines, CTAs, key visuals) along these natural scan paths:
 
 - Top-left gets the most initial attention.
-- Headlines and subheadlines get read; body text mostly gets skanned.
+- Headlines and subheadlines get read; body text mostly gets scanned.
 - Users read only about 20% of page text — make every word earn its place.
 
 ### Image and media guidance
@@ -196,10 +196,6 @@ Mobile traffic and conversion vary sharply by acquisition channel and product. T
 - Images and video: serve optimized responsive formats; prioritize and eagerly load the LCP/hero asset, and lazy-load appropriate below-fold media.
 - Test on real devices, not just browser resize.
 
-### The mobile conversion gap
-
-The 2x desktop-to-mobile conversion gap is one of the largest opportunities in B2C SaaS. Closing even a fraction of this gap significantly increases total signups without additional traffic.
-
 ---
 
 ## Page Speed
@@ -215,7 +211,7 @@ Speed is the invisible multiplier under every other optimization.
 
 ### Target and tactics
 
-Target Core Web Vitals at p75: **LCP ≤2.5s, INP ≤200ms, CLS ≤0.1**. The frontend-design skill owns the implementation checklist.
+Target Core Web Vitals at p75: **LCP ≤2.5s, INP ≤200ms, CLS ≤0.1**. The Performance section of this skill's SKILL.md owns the implementation checklist.
 
 - Compress images (WebP/AVIF).
 - Lazy load below-fold content.
@@ -279,4 +275,4 @@ Use this to audit any SaaS landing page:
 - [ ] Does the mobile experience show headline + CTA without scrolling?
 - [ ] Is there friction-reducing microcopy near every CTA ("No credit card required")?
 - [ ] Are objections addressed throughout the page, not just in the FAQ?
-- [ ] Is the reading level accessible (5th–7th grade)?
+- [ ] Is the reading level matched to the audience—as simple as the subject allows?

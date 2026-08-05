@@ -31,6 +31,8 @@ Use this specification from design-system document or extend mode. Inspect the a
 | Element | State/combination | Trigger | Behavior | Result/focus |
 |---|---|---|---|---|
 
+Include touch gestures (swipe, pinch, long-press) where supported, each with a keyboard/pointer equivalent.
+
 ### Responsive Reflow
 | Component | Content-break condition | Reflow behavior | Container/media query |
 |---|---|---|---|
@@ -38,7 +40,7 @@ Use this specification from design-system document or extend mode. Inspect the a
 ### Content and Edge Cases
 - Empty, partial, loading, error, long/short/localized content
 - Permissions, offline, queued, syncing, conflict, timeout, and retries
-- Truncation/wrapping rules and preserved user input
+- Character limits, and truncation/wrapping rules and preserved user input
 
 ### Motion
 | Element | Trigger | Property | Duration/easing | Reduced-motion behavior |

@@ -13,15 +13,15 @@ For each important surface, inspect:
 | Error | Can the user understand, recover, and retain their work? |
 | Transition | What receives focus and what is announced after change? |
 
-For empty data tables, distinguish loading from empty. Carbon's data-table pattern uses a status message that screen-reader users can hear when results become empty or filters return nothing.
+For empty data tables, distinguish loading from empty. Carbon's data-table pattern replaces the table—including its headers—with the empty state, so screen-reader users never navigate an announced-but-empty structure.
 
 ## Perceived Wait Ladder
 
 | Delay | Feedback |
 |---|---|
 | ≤100ms | Immediate visual/state response |
-| <300ms | Usually no loader; avoid flicker |
-| 0.3–3s | Spinner or skeleton with an honest label |
+| <300ms | No loader; avoid flicker. Fluent extends this to no indicator under 1s |
+| ~1–3s | Spinner or skeleton with an honest label |
 | >3s | Determinate progress when measurable |
 | >10s | Progress plus time estimate and safe background/cancel behavior |
 
@@ -54,6 +54,8 @@ Do not use a toast for errors that require action, content users must copy, or t
 - Prefer soft deletion and a clear retention/grace period where policy permits.
 
 ## Stress and Synchronization Cases
+
+Stress cases (Meyer & Wachter-Boettcher, *Design for Real Life*)—design for people at their worst moment, not an imagined calm user:
 
 - Names that do not fit Western first/last assumptions; diacritics, scripts, long and single-word names.
 - Dates around death, illness, pregnancy loss, anniversaries, and crisis events.
