@@ -6,7 +6,7 @@ argument-hint: "<research data, transcripts, or survey results>"
 
 # Research Synthesis
 
-Turn supplied evidence into traceable findings. Usage: `/web-designer:research-synthesis $ARGUMENTS`.
+Turn supplied evidence into traceable findings.
 
 If a file or path is provided, read it. If nothing is provided, ask for the research data. Do not invent participants, quotes, prevalence, or significance.
 

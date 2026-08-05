@@ -6,7 +6,7 @@ argument-hint: "<Figma URL, screenshot, file, or description>"
 
 # Critique
 
-Review a Figma URL, screenshot, file, webpage, or described flow. Usage: `/web-designer:critique $ARGUMENTS`.
+Review a Figma URL, screenshot, file, webpage, or described flow.
 
 ## Resolve the Input
 

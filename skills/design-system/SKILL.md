@@ -6,7 +6,7 @@ argument-hint: "[audit | document | extend] <component or system>"
 
 # Design System
 
-Manage a system in one of three modes: `audit`, `document`, or `extend`. Usage: `/web-designer:design-system $ARGUMENTS`.
+Manage a system in one of three modes: `audit`, `document`, or `extend`.
 
 If no mode is supplied, infer it only when the request is unambiguous; otherwise ask. Handoff is an output of document/extend, not a fourth mode.
 

@@ -1,0 +1,37 @@
+{
+  "name": "web-designer",
+  "version": "0.5.0",
+  "description": "Six-skill web design toolkit for accessibility, critique, design systems and handoff, research synthesis, UX copy, and production-grade frontend design.",
+  "author": {
+    "name": "Javier Flores",
+    "url": "https://github.com/jfa94"
+  },
+  "homepage": "https://github.com/jfa94/web-designer#readme",
+  "repository": "https://github.com/jfa94/web-designer",
+  "keywords": [
+    "design",
+    "ux",
+    "accessibility",
+    "frontend",
+    "design-system",
+    "copywriting"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Web Designer",
+    "shortDescription": "Accessibility, critique, design systems, UX copy, and frontend design.",
+    "longDescription": "Six-skill web design toolkit for accessibility, critique, design systems and handoff, research synthesis, UX copy, and production-grade frontend design.",
+    "developerName": "Javier Flores",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/jfa94/web-designer",
+    "defaultPrompt": [
+      "Audit this interface for accessibility and usability.",
+      "Review this design system and propose durable improvements.",
+      "Build a distinctive, responsive frontend from this brief."
+    ]
+  }
+}

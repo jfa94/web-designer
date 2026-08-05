@@ -6,7 +6,7 @@ argument-hint: "<context or copy to review>"
 
 # UX Copy
 
-Write or review interface text and marketing-page messaging. Usage: `/web-designer:ux-copy $ARGUMENTS`.
+Write or review interface text and marketing-page messaging.
 
 ## Resolve Context
 

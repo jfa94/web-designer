@@ -4,20 +4,31 @@ A focused web-design toolkit with six skills for accessibility, critique, design
 
 ## Installation
 
+### Claude Code
+
 ```bash
 claude plugin marketplace add jfa94/web-designer
 claude plugin install web-designer@javier-plugins
 ```
 
-To try a local checkout:
+To try a local checkout without installing it:
 
 ```bash
 claude --plugin-dir /path/to/web-designer-plugin
 ```
 
+### Codex
+
+```bash
+codex plugin marketplace add jfa94/web-designer
+codex plugin add web-designer@javier-plugins
+```
+
+Start a new Claude Code or Codex session after installing so all six skills are available.
+
 ## Skills
 
-Skills appear in the slash menu as `/web-designer:<name>` and Claude can invoke them automatically when the request matches their description.
+Claude Code exposes skills as `/web-designer:<name>`; Codex exposes them as `$web-designer:<name>`. Both runtimes can also invoke a skill automatically when the request matches its description.
 
 | Skill | Use it for |
 |---|---|
@@ -43,6 +54,8 @@ For a full landing page, use `frontend-design` for structure and implementation,
 
 ## Example Invocations
 
+Claude Code:
+
 ```text
 /web-designer:critique the checkout flow, focus on mobile
 /web-designer:design-system audit
@@ -50,6 +63,17 @@ For a full landing page, use `frontend-design` for structure and implementation,
 /web-designer:accessibility https://example.com/checkout
 /web-designer:research-synthesis ./research/checkout-notes.md
 /web-designer:frontend-design build the approved landing-page plan
+```
+
+Codex:
+
+```text
+$web-designer:critique the checkout flow, focus on mobile
+$web-designer:design-system audit
+$web-designer:ux-copy error message for a declined payment
+$web-designer:accessibility https://example.com/checkout
+$web-designer:research-synthesis ./research/checkout-notes.md
+$web-designer:frontend-design build the approved landing-page plan
 ```
 
 ## 0.4.0 Rename Map

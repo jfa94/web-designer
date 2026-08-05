@@ -6,7 +6,7 @@ argument-hint: "<Figma URL, URL, file, or description>"
 
 # Accessibility
 
-Audit a Figma URL, webpage, screenshot, file, or described flow against WCAG 2.2 AA. Usage: `/web-designer:accessibility $ARGUMENTS`.
+Audit a Figma URL, webpage, screenshot, file, or described flow against WCAG 2.2 AA.
 
 Conformance is not usability, and tools cannot determine accessibility. Scope the audit, state what was and was not tested, and never present an automated scan as certification.
 

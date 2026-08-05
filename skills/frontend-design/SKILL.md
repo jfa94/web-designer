@@ -96,4 +96,4 @@ Watch your selector specificity. It's easy to generate classes that silently can
 - Use the landing-page reference for page architecture and the ux-copy skill for messaging.
 - Treat performance, accessibility, and responsive behavior as design quality, not cleanup.
 
-Remember: Claude is capable of extraordinary creative work. Don't hold back, show what can truly be created when thinking outside the box and committing fully to a distinctive vision.
+You are capable of extraordinary creative work. Don't hold back: show what can be created by thinking outside the box and committing fully to a distinctive vision.
