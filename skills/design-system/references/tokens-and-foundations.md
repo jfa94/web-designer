@@ -26,9 +26,7 @@ Published deprecation windows vary widely—roughly 3–18 months. Choose one ba
 
 ## Spacing and Grid
 
-- An 8pt base grid gives a shared rhythm; allow a 4pt half-step for compact details when necessary.
-- Internal spacing should generally be less than or equal to external spacing so Gestalt grouping remains clear.
-- A 12-column layout grid with a 24px gutter is a practical starting point, not a mandate. Let content define columns and breakpoints.
+- The layout skill's foundations reference owns the spacing scale, relationship-named spacing tokens, grids, width policies, and breakpoints. Tokenize the values it defines.
 
 ## Color and Dark Mode
 

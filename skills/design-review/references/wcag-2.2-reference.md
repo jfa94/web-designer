@@ -26,7 +26,7 @@ Use the normative W3C WCAG and Understanding documents when making a conformance
 | 1.4.5 Images of Text | AA | Is real text used except where the presentation is essential or customizable? |
 | 1.4.10 Reflow | AA | At 320 CSS px/400% zoom, is two-dimensional scrolling avoided except for essential layouts? |
 | 1.4.11 Non-text Contrast | AA | Do required UI boundaries, states, and meaningful graphics reach 3:1? |
-| 1.4.12 Text Spacing | AA | Does content survive line 1.5×, paragraph 2×, letter .12×, and word .16× spacing? |
+| 1.4.12 Text Spacing | AA | Does content survive line 1.5×, paragraph 2×, letter .12×, and word .16× spacing? These are tolerance tests, not default typography; fixed-height text containers are the usual failure. |
 | 1.4.13 Content on Hover or Focus | AA | Is revealed content dismissible, hoverable, and persistent? |
 
 AAA contrast: 1.4.6 requires 7:1 normal and 4.5:1 large text.
@@ -38,7 +38,7 @@ AAA contrast: 1.4.6 requires 7:1 normal and 4.5:1 large text.
 | 2.1.1 Keyboard | A | Is all functionality available from a keyboard? |
 | 2.1.2 No Keyboard Trap | A | Can focus always leave a component through a documented standard method? |
 | 2.1.4 Character Key Shortcuts | A | Can single-character shortcuts be disabled, remapped, or limited to focus? |
-| 2.2.1 Timing Adjustable | A | Can users turn off, adjust, or extend time limits except documented exceptions? |
+| 2.2.1 Timing Adjustable | A | Can users turn off, adjust, or extend time limits except documented exceptions? A toast that auto-dismisses its only Undo or retry is a timing risk. |
 | 2.2.2 Pause, Stop, Hide | A | Can users control moving, blinking, scrolling, or auto-updating content? |
 | 2.3.1 Three Flashes or Below Threshold | A | Is content free of dangerous flash patterns? |
 | 2.4.1 Bypass Blocks | A | Can repeated blocks be skipped? |
@@ -48,7 +48,7 @@ AAA contrast: 1.4.6 requires 7:1 normal and 4.5:1 large text.
 | 2.4.5 Multiple Ways | AA | Can users locate pages through more than one method, except process steps? |
 | 2.4.6 Headings and Labels | AA | Do headings and labels describe topic or purpose? |
 | 2.4.7 Focus Visible | AA | Is keyboard focus visibly indicated? |
-| 2.4.11 Focus Not Obscured (Minimum) | AA | Is a focused component not entirely hidden by author-created content? New in 2.2. |
+| 2.4.11 Focus Not Obscured (Minimum) | AA | Is a focused component not entirely hidden by author-created content? Test sticky headers and footers, drawers, cookie banners, and overlays. New in 2.2. |
 | 2.5.1 Pointer Gestures | A | Is multipoint/path interaction available through a single pointer unless essential? |
 | 2.5.2 Pointer Cancellation | A | Can users avoid accidental activation through safe down/up-event behavior? |
 | 2.5.3 Label in Name | A | Does the accessible name contain the visible label text? |

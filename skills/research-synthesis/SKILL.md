@@ -1,7 +1,6 @@
 ---
 name: research-synthesis
 description: Synthesize existing user research into themes, insights, opportunities, segments, and recommendations. Trigger with "synthesize user research", "research synthesis", "analyze these interviews", "find themes in transcripts", "survey results", "usability test notes", "support feedback", NPS/CSAT responses, or app-review analysis. Use only when evidence already exists; do not use for research plans, interview guides, survey design, recruiting, or method selection.
-argument-hint: "<research data, transcripts, or survey results>"
 ---
 
 # Research Synthesis

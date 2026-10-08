@@ -1,7 +1,6 @@
 ---
 name: frontend-design
-description: Create distinctive, production-grade web components, pages, applications, and landing-page designs. Trigger with requests to build frontend interfaces, "design a landing page", "structure my homepage", "improve my page layout", "optimize my page for conversions", "wireframe a landing page", hero or above-the-fold design, CTA placement, page structure, visual hierarchy, conversion-focused design, or requests to review or plan landing-page sections and content placement. Use for layout, visual design, and implementation; use ux-copy when the deliverable is words or messaging, and critique for broad review of an existing design.
-argument-hint: "<brief, page, or component to build>"
+description: Create distinctive, production-grade web components, pages, applications, and landing-page designs. Trigger with requests to build frontend interfaces, "design a landing page", visual hierarchy, or visual design and implementation work. Use for visual design and implementation; use layout for page structure, wireframes, and surface choices, ux-copy when the deliverable is words or messaging, and design-review for broad review of an existing design.
 ---
 This skill guides creation of distinctive, production-grade frontend interfaces that avoid generic "AI slop" aesthetics. Implement real working code with exceptional attention to aesthetic details and creative choices.
 The user provides frontend requirements: a component, page, application, or interface to build. They may include context about the purpose, audience, or technical constraints.
@@ -48,16 +47,10 @@ Distinctive work still has to be readable, responsive, fast, and operable.
 - `prefers-reduced-motion` means modify motion, not remove all feedback. Substitute shorter fades, instant state changes, or non-motion cues while preserving meaning.
 
 ### Spacing, Type, and Color
-- Start with an 8pt spacing rhythm and keep internal spacing less than or equal to external spacing so groups read clearly.
-- Keep reading measure around 45–75 characters; `max-width: 66ch` is a strong default.
+- Grid, spacing, reading measure, and breakpoints belong to the layout skill's foundations reference.
 - For fluid type, combine a rem anchor with viewport scaling in `clamp()`. Pure `vw` sizing can defeat text zoom.
 - Treat dark mode as semantic-token design, not inversion. Prefer softened light text such as `#ECEDEE` over pure white on large dark surfaces, provide at least four surface/elevation levels when needed, and verify contrast.
-- For full token, grid, and foundation guidance, see the design-system skill's tokens-and-foundations reference.
-
-### Responsive Composition
-- Choose content-first breakpoints: widen or narrow until the composition breaks, then place the breakpoint there. `642px` is valid when evidence supports it.
-- Use container queries for reusable component reflow; use media queries for page layout and preferences.
-- Treat hover as enhancement. Accommodate `pointer: coarse`, keyboard, touch, 320px reflow, and zoom rather than assuming a device class.
+- For token guidance, see the design-system skill's tokens-and-foundations reference.
 
 ### Performance
 - Meet Core Web Vitals at the 75th percentile: LCP ≤2.5s, INP ≤200ms, CLS ≤0.1.
@@ -68,7 +61,7 @@ Distinctive work still has to be readable, responsive, fast, and operable.
 - Check the WAI-ARIA Authoring Practices Guide before authoring any custom widget; prefer native HTML.
 - Use the ux-copy skill for interface text and landing-page messaging. Keep supplied approved copy intact unless rewriting it is in scope.
 
-For marketing-page structure, hero/CTA placement, social proof, and conversion review, see [landing-page design](references/landing-page-design.md).
+For page structure, surface choices, state coverage, and landing-page architecture (hero/CTA placement, social proof, conversion review), use the layout skill.
 ## Restraint And Self-Critique
 Spend your boldness in one place. Let the signature element be the thing people remember and keep everything around it quiet and disciplined; cut any decoration that doesn't serve the brief. Note that playing it safe is its own kind of risk — restraint means concentrating force, not withholding it. Chanel's rule applies: before leaving the house, look in the mirror and take one thing off.
 Critique your own work as you build, and take screenshots to look at it if the environment supports them — far more informative than re-reading your own CSS.
@@ -93,7 +86,7 @@ Watch your selector specificity. It's easy to generate classes that silently can
 ## Tips
 
 - Spend boldness on one memorable signature and keep supporting elements disciplined.
-- Use the landing-page reference for page architecture and the ux-copy skill for messaging.
+- Use the layout skill for page architecture and the ux-copy skill for messaging.
 - Treat performance, accessibility, and responsive behavior as design quality, not cleanup.
 
 You are capable of extraordinary creative work. Don't hold back: show what can be created by thinking outside the box and committing fully to a distinctive vision.

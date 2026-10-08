@@ -1,7 +1,6 @@
 ---
 name: design-system
-description: Audit, document, extend, and hand off design systems. Trigger with "design system", "component library", "design tokens", "style guide", "handoff to engineering", "developer specs", "implementation notes", "design specs for developers", or requests to maintain consistency across designs or translate designs into implementation guidance. Use for system-level reuse and specifications; use critique for a product-design review.
-argument-hint: "[audit | document | extend] <component or system>"
+description: Audit, document, extend, and hand off design systems. Trigger with "design system", "component library", "design tokens", "style guide", "handoff to engineering", "developer specs", "implementation notes", "design specs for developers", or requests to maintain consistency across designs or translate designs into implementation guidance. Use for system-level reuse and specifications; use design-review for a product-design review and layout for page structure.
 ---
 
 # Design System
@@ -122,7 +121,7 @@ Do not refactor stable, isolated duplication merely for symmetry. Favor upstream
 
 ## Handoff
 
-For implementation-ready specifications, use [handoff](references/handoff.md). Define reflow per component and choose breakpoints where content breaks—`642px` is valid. Never substitute device labels for behavior. Reserve final dimensions in skeletons.
+For implementation-ready specifications, use [handoff](references/handoff.md). Define reflow per component; derive breakpoints from content as the layout skill's foundations reference describes. Never substitute device labels for behavior. Reserve final dimensions in skeletons.
 
 ## Governance and Foundations
 

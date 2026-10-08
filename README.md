@@ -1,6 +1,6 @@
 # Web Designer Plugin
 
-A focused web-design toolkit with six skills for accessibility, critique, design systems, research synthesis, UX copy, and production-grade frontend design.
+A focused web-design toolkit with six skills for layout and interaction structure, design review and accessibility audits, design systems, research synthesis, UX copy, and production-grade frontend design.
 
 ## Installation
 
@@ -24,6 +24,10 @@ codex plugin marketplace add jfa94/web-designer
 codex plugin add web-designer@javier-plugins
 ```
 
+### claude.ai
+
+On a paid plan, open **Customize → Plugins**, add the marketplace `jfa94/web-designer`, and install `web-designer`. Skills trigger when a request matches their description.
+
 Start a new Claude Code or Codex session after installing so all six skills are available.
 
 ## Skills
@@ -32,35 +36,37 @@ Claude Code exposes skills as `/web-designer:<name>`; Codex exposes them as `$we
 
 | Skill | Use it for |
 |---|---|
-| `accessibility` | WCAG 2.2 AA audits, keyboard and screen-reader review, contrast, targets, reflow, and handoff annotations |
-| `critique` | Evidence-backed design feedback across usability, hierarchy, consistency, accessibility risk, and non-happy-path states |
+| `layout` | Page structure, wireframes, page archetypes, grids and spacing, responsive behavior, choosing surfaces and components (modal, drawer, page, table, cards), state and saving contracts, and landing-page structure |
+| `design-review` | `critique` mode: evidence-backed feedback on usability, hierarchy, consistency, and non-happy-path states. `audit` mode: WCAG 2.2 AA audits, keyboard and screen-reader review, contrast, targets, reflow, and handoff annotations |
 | `design-system` | Inventory, audit, documentation, extension, governance, refactoring, tokens, and developer handoff |
 | `research-synthesis` | Turning existing transcripts, survey results, usability notes, support feedback, and analytics context into themes and opportunities |
 | `ux-copy` | Interface microcopy, errors, empty states, CTAs, onboarding, and landing-page messaging |
-| `frontend-design` | Distinctive production frontend builds plus landing-page structure, visual design, responsiveness, and performance |
+| `frontend-design` | Distinctive production frontend builds: visual design, typography, color, motion, and performance |
 
 ## Routing Guide
 
 | Need | Skill |
 |---|---|
-| Audit WCAG conformance | `accessibility` |
-| Review an existing design broadly | `critique` |
+| Plan page structure or choose an interaction pattern | `layout` |
+| Review an existing design broadly | `design-review` (critique) |
+| Audit WCAG conformance | `design-review` (audit) |
 | Audit or extend reusable patterns | `design-system` |
 | Turn collected evidence into findings | `research-synthesis` |
 | Write the words | `ux-copy` |
-| Plan the layout or build the interface | `frontend-design` |
+| Build the interface | `frontend-design` |
 
-For a full landing page, use `frontend-design` for structure and implementation, `ux-copy` for messaging, `critique` for assembled-flow feedback, and `accessibility` for the conformance audit.
+For a full landing page, use `layout` for structure, `ux-copy` for messaging, `frontend-design` for implementation, and `design-review` for assembled-flow feedback and the conformance audit.
 
 ## Example Invocations
 
 Claude Code:
 
 ```text
-/web-designer:critique the checkout flow, focus on mobile
+/web-designer:layout should editing an event's schedule be a modal or a page?
+/web-designer:design-review the checkout flow, focus on mobile
 /web-designer:design-system audit
 /web-designer:ux-copy error message for a declined payment
-/web-designer:accessibility https://example.com/checkout
+/web-designer:design-review audit https://example.com/checkout
 /web-designer:research-synthesis ./research/checkout-notes.md
 /web-designer:frontend-design build the approved landing-page plan
 ```
@@ -68,13 +74,25 @@ Claude Code:
 Codex:
 
 ```text
-$web-designer:critique the checkout flow, focus on mobile
+$web-designer:layout should editing an event's schedule be a modal or a page?
+$web-designer:design-review the checkout flow, focus on mobile
 $web-designer:design-system audit
 $web-designer:ux-copy error message for a declined payment
-$web-designer:accessibility https://example.com/checkout
+$web-designer:design-review audit https://example.com/checkout
 $web-designer:research-synthesis ./research/checkout-notes.md
 $web-designer:frontend-design build the approved landing-page plan
 ```
+
+## 0.6.0 Rename Map
+
+Version 0.6.0 adds `layout` and merges two review skills. Old names no longer exist.
+
+| Before | Now |
+|---|---|
+| `critique` | `design-review` (critique mode, the default) |
+| `accessibility` | `design-review` (audit mode) |
+| Landing-page structure in `frontend-design` | `layout` |
+| Spacing, grid, and breakpoint guidance in `frontend-design` and `design-system` | `layout` |
 
 ## 0.4.0 Rename Map
 

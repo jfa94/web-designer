@@ -84,7 +84,7 @@ CTA strategy is one of the highest-leverage optimization areas.
 
 ### Button design
 
-- Use the accessibility skill's target guidance: 24×24 CSS px is the WCAG AA floor; favor 44–48 for primary actions.
+- Target size: 24×24 CSS px is the WCAG AA floor; favor 44–48 for primary actions.
 - Make the primary action visually prominent without implying that size alone predicts conversion.
 - Color should prioritize contrast against surrounding area, not any specific color. The famous red-vs-green tests were really contrast tests.
 - Remove competing clutter around the CTA, then test the complete composition.
@@ -167,9 +167,9 @@ If you truly have zero social proof of any kind, lean heavily on risk reversal (
 
 ### Visual scanning patterns
 
-Visitors scan in F-patterns and Z-patterns. Place the most important elements (headlines, CTAs, key visuals) along these natural scan paths:
+F-pattern findings (NN/g) describe how people scan poorly structured content; they are not a layout template. Give scanners structure instead:
 
-- Top-left gets the most initial attention.
+- Meaningful headings and front-loaded wording carry the message for people who only scan.
 - Headlines and subheadlines get read; body text mostly gets scanned.
 - Users read only about 20% of page text — make every word earn its place.
 
@@ -211,7 +211,7 @@ Speed is the invisible multiplier under every other optimization.
 
 ### Target and tactics
 
-Target Core Web Vitals at p75: **LCP ≤2.5s, INP ≤200ms, CLS ≤0.1**. The Performance section of this skill's SKILL.md owns the implementation checklist.
+Target Core Web Vitals at p75: **LCP ≤2.5s, INP ≤200ms, CLS ≤0.1**. The frontend-design skill's Performance section owns the implementation checklist.
 
 - Compress images (WebP/AVIF).
 - Lazy load below-fold content.
