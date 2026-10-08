@@ -19,12 +19,24 @@ Review a Figma URL, screenshot, file, webpage, or described flow.
    - the stated objective
 
    If only the focus is missing, review the complete journey.
-3. Choose the mode:
-   - `critique` (default): broad expert feedback on usability, hierarchy, consistency, states, and obvious accessibility risks.
-   - `audit`: a WCAG 2.2 AA conformance and assistive-technology audit. Follow [audit mode](references/audit-mode.md).
+3. Choose the action:
+   - Critique (default): broad expert feedback on usability, hierarchy, consistency, states, and obvious accessibility risks.
+   - If the request includes `--audit`, or clearly asks for an accessibility or WCAG check ("is this accessible?"), run a WCAG 2.2 AA conformance and assistive-technology audit. Follow the [WCAG audit reference](references/audit-mode.md). When chosen from plain language, say so in the first line of the response.
    - If the user asks for both, run the critique, then the audit, and refer from the critique's Accessibility section to the audit.
+   - Any other text is the focus.
 
-## Critique Mode
+## Resolve Product Guidelines
+
+Before deciding anything, look for the product's interface guidelines: `docs/design/README.md`, or a location named in `AGENTS.md` or `CLAUDE.md`. Read its page map, then only the pages this task needs.
+
+- **Precedence:** Requirement (Must / Must not) > Confirmed rule > Inferred rule (follow it and flag it as unconfirmed) > this skill's guidance. A product Default never overrides a Requirement, whether the Requirement comes from the guidelines or from this skill.
+- **Cite** the rule ID for every decision or finding a rule drives.
+- **Exceptions:** a case covered by a live entry in the exceptions register (`governance.md`) is not a violation.
+- **Gaps:** where the guidelines are silent or a rule is Open, use this skill's guidance and list the decision as a design-system `--extend` candidate.
+
+If no guidelines exist, use this skill's guidance alone.
+
+## Critique
 
 Distinguish three activities:
 - **Critique:** collaborative feedback measured against intent. Suitable at any point in design.
@@ -62,8 +74,8 @@ Ban pseudo-evidence such as "users prefer" without a source.
    - component, copy, platform, and design-system conventions
    - whether equivalent tasks behave equivalently (surface, saving model, feedback, return location)
 
-   The layout skill's review mode covers this audit by task family.
-5. **Accessibility:** obvious risks in contrast, targets, keyboard, focus, and semantics. Route conformance claims to audit mode.
+   The layout skill's `--review` action covers this audit by task family.
+5. **Accessibility:** obvious risks in contrast, targets, keyboard, focus, and semantics. Route conformance claims to `--audit`.
 
 Always include what works. Positive evidence tells the team what to preserve.
 
@@ -101,12 +113,11 @@ Release-gate scenarios for pre-ship reviews:
 
 | Severity | Meaning |
 |---|---|
-| 🔴 High | Blocks or derails a primary task, risks material harm, or affects many users with no reasonable workaround |
-| 🟡 Medium | Causes substantial delay, confusion, or repeated error; a workaround exists |
-| 🟢 Low | Local friction or polish issue with limited task impact |
-| Cosmetic | Visual defect without current task impact; track it because accumulated cosmetic debt erodes clarity and trust |
+| 🔴 Critical | Blocks or derails a primary task, blocks access for a disability group, or risks material harm; no reasonable workaround |
+| 🟡 Major | Substantially impairs a task or causes serious confusion or repeated error; any workaround is burdensome |
+| 🟢 Minor | Limited, local friction or isolated nonconformance that does not block the task |
 
-Severity is user impact. Priority also weighs reach, strategic importance, effort, dependencies, and risk. Never use the two terms interchangeably.
+Rate visual issues by their impact like any other; the Type column records that a finding is visual. Severity is user impact. Priority also weighs reach, strategic importance, effort, dependencies, and risk. Never use the two terms interchangeably. Report a product rule's strength (Must / Should) separately from severity. If the product's `governance.md` defines its own scale, use that instead.
 
 ### Critique Output
 
@@ -118,8 +129,8 @@ Severity is user impact. Priority also weighs reach, strategic importance, effor
 [What works and the largest opportunity]
 
 ### Usability
-| Finding and evidence | Heuristic/objective | Severity | Recommendation |
-|---|---|---|---|
+| Finding and evidence | Type | Heuristic, objective, or rule ID | Severity | Recommendation |
+|---|---|---|---|---|
 
 ### Visual Hierarchy
 - **First attention:** [element and whether that supports the task]
@@ -127,8 +138,8 @@ Severity is user impact. Priority also weighs reach, strategic importance, effor
 - **Emphasis:** [assessment]
 
 ### Consistency
-| Element/location | Evidence | Recommendation |
-|---|---|---|
+| Element/location | Evidence | Rule ID | Recommendation |
+|---|---|---|---|
 
 ### Accessibility
 [Obvious risks; identify what needs a full audit]

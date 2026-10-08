@@ -16,10 +16,22 @@ Label each rule you give as one of:
 
 Never present one design system's convention as a law of usability. Apple, Material, Fluent, Carbon and GOV.UK optimize for different contexts.
 
-## Modes
+## Resolve Product Guidelines
 
-- `plan` (default): produce a layout spec for a page, flow, or component placement.
-- `review`: audit structural and behavioral consistency across equivalent tasks.
+Before deciding anything, look for the product's interface guidelines: `docs/design/README.md`, or a location named in `AGENTS.md` or `CLAUDE.md`. Read its page map, then only the pages this task needs.
+
+- **Precedence:** Requirement (Must / Must not) > Confirmed rule > Inferred rule (follow it and flag it as unconfirmed) > this skill's guidance. A product Default never overrides a Requirement, whether the Requirement comes from the guidelines or from this skill.
+- **Cite** the rule ID for every decision or finding a rule drives.
+- **Exceptions:** a case covered by a live entry in the exceptions register (`governance.md`) is not a violation.
+- **Gaps:** where the guidelines are silent or a rule is Open, use this skill's guidance and list the decision as a design-system `--extend` candidate.
+
+If no guidelines exist, use this skill's guidance alone.
+
+## Choose the Action
+
+- Plan (default): produce a layout spec for a page, flow, or component placement.
+- If the request includes `--review`, or clearly asks to review consistency across screens or equivalent tasks, run the Review Workflow below. When chosen from plain language, say so in the first line of the response.
+- Any other text is the focus.
 
 ## Plan Workflow
 
@@ -121,7 +133,7 @@ Never present one design system's convention as a law of usability. Apple, Mater
 - [Decision needed]
 ```
 
-## Review Workflow
+## Review Workflow (`--review`)
 
 1. Group equivalent tasks across the product: every create flow, delete, filter/search, settings change, and error recovery.
 2. Compare each group side by side on: entry point, surface, field order, saving model, validation timing, cancellation, completion feedback, and return location.

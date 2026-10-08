@@ -71,4 +71,47 @@ if grep -rEn '/web-designer:|\$ARGUMENTS|Claude' "$ROOT/skills"; then
   exit 1
 fi
 
+# Since 0.7.0, flags select actions; a bare action word after a skill name is old syntax.
+if grep -nE '^[/$]web-designer:[a-z-]+ (plan|review|critique|audit|document|extend|handoff)( |$)' "$ROOT/README.md"; then
+  echo "README examples must select actions with flags" >&2
+  exit 1
+fi
+for example in 'layout --review' 'design-review --audit' 'design-system --audit' 'design-system --extend' 'design-system --handoff'; do
+  if ! grep -Fq "web-designer:$example" "$ROOT/README.md"; then
+    echo "README lacks a web-designer:$example example" >&2
+    exit 1
+  fi
+done
+if grep -rniE '(^|[^a-z-])(plan|review|critique|audit|document|extend|handoff)`? modes?([^a-z]|$)|^#+ modes?$' "$ROOT/skills" "$ROOT/README.md"; then
+  echo "Leftover mode wording; actions are flags" >&2
+  exit 1
+fi
+
+# Skills can't share files, so the severity scale and guidelines block are copied verbatim.
+severity_table() { awk '/^[|] Severity [|] Meaning [|]$/ { f = 1 } f && !/^[|]/ { exit } f' "$1"; }
+expected=$(severity_table "$ROOT/skills/design-review/SKILL.md")
+if [[ $(grep -c . <<<"$expected") -ne 5 ]]; then
+  echo "design-review severity table must have exactly three levels" >&2
+  exit 1
+fi
+for file in skills/design-review/references/audit-mode.md skills/design-system/SKILL.md; do
+  if [[ "$(severity_table "$ROOT/$file")" != "$expected" ]]; then
+    echo "$file: severity table differs from design-review's" >&2
+    exit 1
+  fi
+done
+
+guidelines_block() { awk '$0 == "## Resolve Product Guidelines" { f = 1; print; next } f && /^## / { exit } f' "$1"; }
+expected=$(guidelines_block "$ROOT/skills/layout/SKILL.md")
+if [[ -z "$expected" ]]; then
+  echo "skills/layout/SKILL.md lacks the Resolve Product Guidelines block" >&2
+  exit 1
+fi
+for skill in design-review frontend-design ux-copy; do
+  if [[ "$(guidelines_block "$ROOT/skills/$skill/SKILL.md")" != "$expected" ]]; then
+    echo "skills/$skill/SKILL.md: Resolve Product Guidelines block differs from layout's" >&2
+    exit 1
+  fi
+done
+
 echo "OK"

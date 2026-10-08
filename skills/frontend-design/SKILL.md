@@ -6,6 +6,17 @@ This skill guides creation of distinctive, production-grade frontend interfaces 
 The user provides frontend requirements: a component, page, application, or interface to build. They may include context about the purpose, audience, or technical constraints.
 ## Ground It In The Subject
 Before anything else, pin down what this actually is. If the brief doesn't name the subject, the audience, and the single job the page has to do, name them yourself and say so out loud. Distinctive choices come from the subject's own world — its materials, its instruments, its artifacts, its vocabulary. A page about vinyl mastering and a page about tax software should not be able to swap stylesheets. Build with the brief's real content and subject matter throughout, not lorem-ipsum stand-ins that let generic choices slip through unnoticed.
+## Resolve Product Guidelines
+
+Before deciding anything, look for the product's interface guidelines: `docs/design/README.md`, or a location named in `AGENTS.md` or `CLAUDE.md`. Read its page map, then only the pages this task needs.
+
+- **Precedence:** Requirement (Must / Must not) > Confirmed rule > Inferred rule (follow it and flag it as unconfirmed) > this skill's guidance. A product Default never overrides a Requirement, whether the Requirement comes from the guidelines or from this skill.
+- **Cite** the rule ID for every decision or finding a rule drives.
+- **Exceptions:** a case covered by a live entry in the exceptions register (`governance.md`) is not a violation.
+- **Gaps:** where the guidelines are silent or a rule is Open, use this skill's guidance and list the decision as a design-system `--extend` candidate.
+
+If no guidelines exist, use this skill's guidance alone.
+
 ## Design Thinking
 Before coding, understand the context and commit to a BOLD aesthetic direction:
 - **Purpose**: What problem does this interface solve? Who uses it?

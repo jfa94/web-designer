@@ -1,6 +1,6 @@
 # Design Handoff
 
-Use this specification from design-system document or extend mode. Inspect the actual design and code conventions; do not invent measurements or component APIs.
+Use this specification for `--handoff`. Reply in chat; write a file only when the request gives a `.md` path. Read the product guidelines first and cite rule IDs. A handoff is a feature spec: never write it into the guidelines. Inspect the actual design and code conventions; do not invent measurements or component APIs.
 
 ## Principles
 
@@ -18,6 +18,16 @@ Use this specification from design-system document or extend mode. Inspect the a
 
 ### Overview
 [User, job, journey boundaries, source design/version]
+
+### Guidelines Applied
+| Rule ID | Applies to | How |
+|---|---|---|
+
+### Exception Requests
+| Rule ID | Deviation | Why the default fails | Alternative | Evidence |
+|---|---|---|---|---|
+
+A deviation from a Requirement (Must / Must not) goes under Acceptance Checks as a fix, never as an exception request.
 
 ### Layout and Tokens
 | Region | Constraint/token | Value/reference | Notes |

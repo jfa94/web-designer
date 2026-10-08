@@ -1,4 +1,4 @@
-# Audit Mode: WCAG 2.2 AA
+# WCAG 2.2 AA Audit
 
 Audit a Figma URL, webpage, screenshot, file, or described flow against WCAG 2.2 AA.
 
@@ -88,11 +88,11 @@ Conformance is not the same as usability, and tools cannot determine accessibili
 
 ## Severity
 
-| Level | Definition |
+| Severity | Meaning |
 |---|---|
-| 🔴 Critical | Blocks a task or access for a disability group; no reasonable workaround |
-| 🟡 Major | Substantially impairs a task, causes serious confusion, or has a burdensome workaround |
-| 🟢 Minor | Limited friction or isolated nonconformance that does not block the task |
+| 🔴 Critical | Blocks or derails a primary task, blocks access for a disability group, or risks material harm; no reasonable workaround |
+| 🟡 Major | Substantially impairs a task or causes serious confusion or repeated error; any workaround is burdensome |
+| 🟢 Minor | Limited, local friction or isolated nonconformance that does not block the task |
 
 ## Output
 
@@ -105,22 +105,22 @@ Conformance is not the same as usability, and tools cannot determine accessibili
 **Issues:** [X] | **Critical:** [X] | **Major:** [X] | **Minor:** [X]
 
 ### Perceivable
-| # | Evidence and location | Criterion | Severity | Affected users | Recommendation |
+| # | Evidence and location | WCAG SC / rule ID | Severity | Affected users | Recommendation |
 |---|---|---|---|---|---|
 | 1 | [reproduction] | [1.x.x] | [🔴/🟡/🟢] | [group/impact] | [specific fix] |
 
 ### Operable
-| # | Evidence and location | Criterion | Severity | Affected users | Recommendation |
+| # | Evidence and location | WCAG SC / rule ID | Severity | Affected users | Recommendation |
 |---|---|---|---|---|---|
 | 1 | [reproduction] | [2.x.x] | [🔴/🟡/🟢] | [group/impact] | [specific fix] |
 
 ### Understandable
-| # | Evidence and location | Criterion | Severity | Affected users | Recommendation |
+| # | Evidence and location | WCAG SC / rule ID | Severity | Affected users | Recommendation |
 |---|---|---|---|---|---|
 | 1 | [reproduction] | [3.x.x] | [🔴/🟡/🟢] | [group/impact] | [specific fix] |
 
 ### Robust
-| # | Evidence and location | Criterion | Severity | Affected users | Recommendation |
+| # | Evidence and location | WCAG SC / rule ID | Severity | Affected users | Recommendation |
 |---|---|---|---|---|---|
 | 1 | [reproduction] | [4.x.x] | [🔴/🟡/🟢] | [group/impact] | [specific fix] |
 

@@ -11,6 +11,17 @@ Write or review interface text and marketing-page messaging.
 
 If the request does not supply enough context, ask for the screen/flow, user goal and emotional state, audience, voice, constraints, surrounding copy, and what happens after the action. Name controls by what users recognize and control, not system implementation.
 
+## Resolve Product Guidelines
+
+Before deciding anything, look for the product's interface guidelines: `docs/design/README.md`, or a location named in `AGENTS.md` or `CLAUDE.md`. Read its page map, then only the pages this task needs.
+
+- **Precedence:** Requirement (Must / Must not) > Confirmed rule > Inferred rule (follow it and flag it as unconfirmed) > this skill's guidance. A product Default never overrides a Requirement, whether the Requirement comes from the guidelines or from this skill.
+- **Cite** the rule ID for every decision or finding a rule drives.
+- **Exceptions:** a case covered by a live entry in the exceptions register (`governance.md`) is not a violation.
+- **Gaps:** where the guidelines are silent or a rule is Open, use this skill's guidance and list the decision as a design-system `--extend` candidate.
+
+If no guidelines exist, use this skill's guidance alone.
+
 ## Core Principles
 
 1. Clear: specific beats clever; remove jargon and ambiguity.
