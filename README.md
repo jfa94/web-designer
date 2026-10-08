@@ -2,6 +2,8 @@
 
 A focused web-design toolkit with six skills for layout and interaction structure, design review and accessibility audits, design systems, research synthesis, UX copy, and production-grade frontend design.
 
+Architecture, reference, and contributor guides: [docs/](docs/README.md).
+
 ## Installation
 
 ### Claude Code
