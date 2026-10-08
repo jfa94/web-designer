@@ -15,11 +15,13 @@ For the reasons behind these constraints, see [Self-contained skills](../explana
 
 | Constraint | Detail |
 |---|---|
-| Allowed keys | Only `name:` and `description:` lines, between the opening `---` and the closing `---` |
+| Allowed keys | Only `name:`, `description:`, and `argument-hint:` lines, between the opening `---` and the closing `---` |
 | Description length | At most 1024 characters |
 | Description characters | No `<` or `>` |
+| Argument hint | Required. A double-quoted string of bracketed segments, such as `"[--audit] [focus]"`, with no `<` or `>`. The quotes keep YAML from reading the leading `[` as a list |
+| Hint flags | `layout` lists `--review`, `design-review` lists `--audit`, and `design-system` lists `--audit`, `--extend`, and `--handoff` |
 
-Error: `<file>: frontmatter keys must be name and description only` or `<file>: description must be <=1024 chars without angle brackets`.
+Errors: `<file>: frontmatter keys must be name, description, and argument-hint only`, `<file>: description must be <=1024 chars without angle brackets`, `<file>: argument-hint must be a quoted [bracketed] string without angle brackets`, or `<file>: argument-hint lacks <flag>`.
 
 ## Links
 

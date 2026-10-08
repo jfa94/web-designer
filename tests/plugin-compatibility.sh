@@ -41,10 +41,10 @@ for skill_file in "$ROOT"/skills/*/SKILL.md; do
   skill_dir=$(basename "$(dirname "$skill_file")")
   grep -Fxq "name: $skill_dir" "$skill_file"
 
-  # claude.ai skill uploads accept a narrower frontmatter than Claude Code.
+  # Keep frontmatter narrow for claude.ai; argument-hint is the one extra key (Claude Code autocomplete).
   frontmatter=$(awk 'NR == 1 && $0 == "---" { next } $0 == "---" { exit } { print }' "$skill_file")
-  if grep -vqE '^(name|description): ' <<<"$frontmatter"; then
-    echo "$skill_file: frontmatter keys must be name and description only" >&2
+  if grep -vqE '^(name|description|argument-hint): ' <<<"$frontmatter"; then
+    echo "$skill_file: frontmatter keys must be name, description, and argument-hint only" >&2
     exit 1
   fi
   description=$(sed -n 's/^description: //p' <<<"$frontmatter")
@@ -52,6 +52,24 @@ for skill_file in "$ROOT"/skills/*/SKILL.md; do
     echo "$skill_file: description must be <=1024 chars without angle brackets" >&2
     exit 1
   fi
+  hint=$(sed -n 's/^argument-hint: //p' <<<"$frontmatter")
+  if [[ ! "$hint" =~ ^\"\[.+\]\"$ || "$hint" == *[\<\>]* ]]; then
+    echo "$skill_file: argument-hint must be a quoted [bracketed] string without angle brackets" >&2
+    exit 1
+  fi
+  # Hints must advertise the flags each skill defines.
+  case "$skill_dir" in
+    layout) required_flags="--review" ;;
+    design-review) required_flags="--audit" ;;
+    design-system) required_flags="--audit --extend --handoff" ;;
+    *) required_flags="" ;;
+  esac
+  for flag in $required_flags; do
+    if [[ "$hint" != *"$flag"* ]]; then
+      echo "$skill_file: argument-hint lacks $flag" >&2
+      exit 1
+    fi
+  done
   skill_count=$((skill_count + 1))
 done
 [[ "$skill_count" -eq 6 ]]

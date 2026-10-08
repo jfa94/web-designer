@@ -20,4 +20,6 @@ For the same reason, actions are chosen with plain-text flags rather than runtim
 
 ## The narrowest frontmatter wins
 
-Claude Code accepts more `SKILL.md` frontmatter keys than claude.ai skill uploads do. Because one file serves both, the plugin uses only what claude.ai accepts: `name` and `description`, with the description kept to 1024 characters or fewer and free of angle brackets. Everything else, including how to select actions, goes in the skill body.
+Claude Code accepts more `SKILL.md` frontmatter keys than claude.ai skill uploads do. Because one file serves both, the plugin keeps to `name` and `description`, with the description kept to 1024 characters or fewer and free of angle brackets. Everything else, including how to select actions, goes in the skill body.
+
+The one exception is `argument-hint`. Claude Code shows it as ghost text after the command (for example `/web-designer:design-system [--audit | --extend | --handoff] [focus or spec path]`), so users see the available flags and expected input as they type. It is display-only. The plugin assumes other runtimes ignore it, but that is not yet verified for claude.ai uploads; if they reject it, remove the key and put a usage line at the start of each description.

@@ -1,6 +1,7 @@
 ---
 name: ux-copy
 description: Write or review interface and landing-page copy. Trigger with "write copy for", "help with UX copy", "what should this button say", "error message for", "empty state copy", "write landing page copy", "write a headline", "improve my homepage messaging", "write CTA text", "create a value proposition", PAS, AIDA, StoryBrand, JTBD, headline formulas, benefit-driven copy, objection handling, microcopy, conversion copy, product-launch messaging, or requests to critique, rewrite, or draft page copy section by section. Use for words and messaging; use layout for page structure and wireframes, and frontend-design for visual design or implementation. Do not use for general content, blog posts, email, or ad copy unless it is explicitly landing-page messaging.
+argument-hint: "[screen, element, or page copy]"
 ---
 
 # UX Copy

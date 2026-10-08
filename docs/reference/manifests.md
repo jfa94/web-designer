@@ -9,7 +9,7 @@ Claude Code plugin manifest. This is the source the other manifests are compared
 | Field | Value | Constraint |
 |---|---|---|
 | `name` | `web-designer` | Enforced: must equal `web-designer` |
-| `version` | `0.7.0` | Enforced: `MAJOR.MINOR.PATCH` digits only |
+| `version` | `0.7.1` | Enforced: `MAJOR.MINOR.PATCH` digits only |
 | `description` | Six-skill toolkit summary | Source for the Codex manifest comparison |
 | `author.name` | `Javier Flores` | |
 | `keywords` | `design`, `ux`, `accessibility`, `frontend`, `design-system`, `copywriting`, `layout` | |
@@ -26,7 +26,7 @@ Claude Code marketplace.
 | `plugins[0].name` | `web-designer` | Enforced: equals the Claude manifest `name` |
 | `plugins[0].source` | `./` | |
 | `plugins[0].description` | Same text as the manifest description | Not enforced |
-| `plugins[0].version` | `0.7.0` | Enforced: equals the Claude manifest `version` |
+| `plugins[0].version` | `0.7.1` | Enforced: equals the Claude manifest `version` |
 
 ## `.codex-plugin/plugin.json`
 
@@ -35,7 +35,7 @@ Codex plugin manifest.
 | Field | Value | Constraint |
 |---|---|---|
 | `name` | `web-designer` | Enforced: equals the Claude manifest |
-| `version` | `0.7.0` | Enforced: equals the Claude manifest |
+| `version` | `0.7.1` | Enforced: equals the Claude manifest |
 | `description` | Six-skill toolkit summary | Enforced: equals the Claude manifest |
 | `author.name`, `author.url` | `Javier Flores`, `https://github.com/jfa94` | |
 | `homepage` | `https://github.com/jfa94/web-designer#readme` | |

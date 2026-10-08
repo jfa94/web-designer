@@ -1,6 +1,7 @@
 ---
 name: design-review
 description: Evaluate existing designs and interfaces through expert critique or a WCAG 2.2 AA accessibility audit. Trigger with "what do you think of this design", "give me feedback on", "critique this", "review this mockup", "design feedback", "is this accessible", "accessibility check", "WCAG audit", "can screen readers use this", "color contrast", "accessibility audit", "is this ready to ship", or when a user shares a design and asks for opinions or asks to make it accessible to all users. Use for evaluating what exists; use layout to plan structure, design-system for system drift or component governance, and frontend-design for implementation.
+argument-hint: "[--audit] [Figma URL, screenshot, file, or page]"
 ---
 
 # Design Review

@@ -2,7 +2,7 @@
 
 # Web Designer Plugin Documentation
 
-Web Designer (`web-designer`, version 0.7.0) is a plugin of six agent skills for web design work. One set of skills ships to three runtimes: Claude Code, Codex, and claude.ai. The skills cover:
+Web Designer (`web-designer`, version 0.7.1) is a plugin of six agent skills for web design work. One set of skills ships to three runtimes: Claude Code, Codex, and claude.ai. The skills cover:
 
 - `layout`: page structure, page archetypes, interaction surfaces, behaviour contracts, and landing-page structure.
 - `design-review`: expert critique, plus a WCAG 2.2 AA audit with `--audit`.

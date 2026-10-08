@@ -1,6 +1,7 @@
 ---
 name: design-system
 description: Build and maintain a product's interface guidelines, an internal HIG, by inferring the existing system from code and docs and then interviewing to settle every rule; also audit drift, extend the system, and hand off to engineering. Trigger with "design system", "design guidelines", "interface guidelines", "HIG", "document our design system", "design principles", "component library", "component docs", "when to use this component", "design tokens", "colour roles", "style guide", "audit our design system", "design drift", "add a component to the system", "handoff to engineering", "developer specs", "implementation notes", "design specs for developers", or requests to maintain consistency across designs or translate designs into implementation guidance. Flags --audit, --extend, and --handoff select the other actions. Use layout for page structure, design-review to evaluate a design, and frontend-design to build it.
+argument-hint: "[--audit | --extend | --handoff] [focus or spec path]"
 ---
 
 # Design System

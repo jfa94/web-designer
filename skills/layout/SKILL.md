@@ -1,6 +1,7 @@
 ---
 name: layout
 description: Plan and review page layout, information structure, and interaction-surface choices for websites and web applications. Trigger with "lay out this page", "wireframe", "page structure", "information architecture", "navigation structure", "grid", "spacing", "responsive layout", "breakpoints", "dashboard layout", "form layout", "settings page", "list-detail", "modal or drawer", "modal or page", "which component should I use", "tabs or accordion", "table or cards", "pagination or infinite scroll", "landing page structure", "structure my homepage", "improve my page layout", "optimize my page for conversions", hero or above-the-fold layout, CTA placement, landing-page sections and content placement, or requests to make layouts and interactions consistent across screens. Use for structure and behavior decisions; use frontend-design to build the interface, ux-copy for the words, and design-review to evaluate an existing design.
+argument-hint: "[--review] [page, flow, or screens]"
 ---
 
 # Layout

@@ -2,16 +2,17 @@
 
 This guide adds a seventh skill. Before you start, read [Skill authoring constraints](../reference/skill-authoring-constraints.md).
 
-1. Create `skills/<name>/SKILL.md`. Its frontmatter must contain only `name` (equal to the directory name) and `description`:
+1. Create `skills/<name>/SKILL.md`. Its frontmatter must contain only `name` (equal to the directory name), `description`, and `argument-hint`:
 
    ```markdown
    ---
    name: <name>
    description: <what it does>. Trigger with "<phrase>", "<phrase>", .... Use for <scope>; use <other-skill> for <neighbouring concern>.
+   argument-hint: "[--flag] [what the user supplies]"
    ---
    ```
 
-   Keep the description to 1024 characters or fewer, with no `<` or `>`. Write it in the existing style: what the skill does, its trigger phrases, then which other skill handles each neighbouring concern.
+   Keep the description to 1024 characters or fewer, with no `<` or `>`. Quote the hint, list every flag the skill defines, and avoid `<` and `>`; Claude Code shows it as autocomplete text after the command. Write it in the existing style: what the skill does, its trigger phrases, then which other skill handles each neighbouring concern.
 
 2. Write the body without naming a runtime. Do not use `Claude`, `/web-designer:`, or `$ARGUMENTS`. Refer to other skills by name in prose ("use the layout skill").
 
